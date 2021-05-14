@@ -1,0 +1,14 @@
+<div class="container-show">
+  <h1><%= @event.title %></h1>
+  <div class="event">
+    <div class="description">
+      <p><%= @event.description %></p>
+    </div>
+    <div class="info">
+      <p><i class="fas fa-user-astronaut"></i> <%= @event.creator.name %></p>
+      <p><i class="far fa-calendar-alt"></i> <%= @event.starting_date_time.strftime("%B %-d, %Y at %l:%M %p") %></p>
+      <p><i class="far fa-calendar-alt"></i> <%= @event.ending_date_time.strftime("%B %-d, %Y at %l:%M %p") %></p>
+      <p><i class="fas fa-map-marked-alt"></i> <%= @event.location %></p>
+    </div>
+  </div>
+</div>

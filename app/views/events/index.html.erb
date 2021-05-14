@@ -1,0 +1,12 @@
+<div class="container-index">
+  <h1>Events</h1>
+  <section class="display-events">
+    <% @events.each do |event| %>
+    <div>
+      <h3> <%= link_to event do %> <%= event.title %> <% end %></h3>
+      <p><%= event.description %></p>
+      <small><%= event.creator.name %></small>
+    </div>
+    <% end %>
+  </section>
+</div>
