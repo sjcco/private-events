@@ -3,11 +3,11 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 .events {
-  margin-top: 150px;
+  margin-top: 100px;
   text-align: center;
   .container-show {
     width: 50%;
-    margin: auto;
+    margin: 0 auto 50px auto;
     border-radius: 5px;
     -webkit-box-shadow: 0px 0px 15px 5px #adadad;
     box-shadow: 0px 0px 15px 5px #adadad;
@@ -24,6 +24,7 @@
       padding-bottom: 50px;
       text-align: left;
       font-family: "Inter", sans-serif;
+      font-size: 0.95rem;
       color: rgb(66, 66, 66);
       .description {
         width: 50%;
@@ -33,7 +34,53 @@
         padding-left: 20px;
       }
     }
+    button {
+      margin-bottom: 40px;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      color: white;
+    }
+    .attend {
+      background-color: #00adef;
+    }
+    .cancel {
+      background-color: rgb(236, 68, 90);
+    }
   }
+  .container-attendance {
+    width: 30%;
+    margin: 0 auto 40px auto;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 15px 5px #adadad;
+    box-shadow: 0px 0px 15px 5px #adadad;
+    button {
+      margin: 40px;
+      background-color: #00adef;
+      color: white;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      &:hover {
+        background-color: #0092cc;
+      }
+    }
+    .content {
+      display: none;
+      overflow: hidden;
+      padding-bottom: 40px;
+      p {
+        a {
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
   .container-index {
     width: 80%;
     margin: auto;
@@ -94,7 +141,7 @@
           display: flex;
           justify-content: space-evenly;
           .field-date {
-            width: 35%;
+            width: 40%;
             input {
               width: 100%;
             }

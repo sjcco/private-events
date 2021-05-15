@@ -16,9 +16,9 @@
 <body>
   <div class="container">
     <nav>
-      <%= link_to root_path do %>
-      <%= image_tag "logo.png" %>
-      <% end %>
+      <%= link_to root_path do %> <div>
+        <%= image_tag "logo.png" %> <p>Bati-Events</p>
+      </div> <% end %>
       <ul>
         <% if user_signed_in? %>
 

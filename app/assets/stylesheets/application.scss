@@ -54,10 +54,18 @@ nav {
   top: 0;
   width: 100%;
   a {
-    width: 75%;
-    img {
-      width: 100px;
-      height: 45px;
+    width: 70%;
+    text-decoration: none;
+    div {
+      display: flex;
+      p {
+        color: white;
+        text-decoration: none;
+      }
+      img {
+        width: 100px;
+        height: 45px;
+      }
     }
   }
   ul {

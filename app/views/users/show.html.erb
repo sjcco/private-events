@@ -3,15 +3,25 @@
   <div class="events-container">
     <div>
       <h2>Hosted Events</h2>
-      <p>asdf</p>
+
+      <% @user.events.past.each do |event| %>
+
+      <p> <%= link_to event do %> <%= event.title %><% end %> </p>
+      <% end %>
     </div>
     <div>
       <h2>Upcoming Events</h2>
-      <p></p>
+      <% @user.attended_events.upcoming.each do |event| %>
+
+      <p> <%= link_to event do %> <%= event.title %><% end %> </p>
+      <% end %>
     </div>
     <div>
       <h2>Attended Events</h2>
-      <p></p>
+      <% @user.attended_events.past.each do |event| %>
+
+      <p> <%= link_to event do %> <%= event.title %><% end %> </p>
+      <% end %>
     </div>
   </div>
 </div>
