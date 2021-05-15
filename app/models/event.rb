@@ -10,14 +10,12 @@ class Event < ApplicationRecord
 
   scope :past, -> { where('ending_date_time < ?', DateTime.now) }
   scope :upcoming, -> { where('starting_date_time > ?', DateTime.now) }
-  
+
   private
 
   def end_date_is_after_start_date
     return if ending_date_time.blank? || starting_date_time.blank?
 
-    if ending_date_time < starting_date_time
-      errors.add(:end_date, "cannot be before the start date") 
-    end
+    errors.add(:end_date, 'cannot be before the start date') if ending_date_time < starting_date_time
   end
 end

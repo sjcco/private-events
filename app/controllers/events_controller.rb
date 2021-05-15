@@ -20,11 +20,11 @@ class EventsController < ApplicationController
       flash[:notice] = "Event '#{@event.title}' was successfully created!"
       redirect_to @event
     else
-      if @event.errors.nil?
-        flash[:alert] = "Something went wrong, please try again"
-      else
-        flash[:alert] = @event.errors.messages
-      end
+      flash[:alert] = if @event.errors.nil?
+                        'Something went wrong, please try again'
+                      else
+                        @event.errors.messages
+                      end
       render 'new'
     end
   end
@@ -35,10 +35,14 @@ class EventsController < ApplicationController
     params.require(:event).permit(:title, :description, :starting_date_time, :ending_date_time, :location)
   end
 
+  # rubocop: disable Style/GuardClause
+
   def require_login
     unless user_signed_in?
-      flash[:alert] = "You must be logged in to access this"
-      redirect_to login_path      
+      flash[:alert] = 'You must be logged in to access this'
+      redirect_to login_path
     end
   end
+
+  # rubocop: enable Style/GuardClause
 end
