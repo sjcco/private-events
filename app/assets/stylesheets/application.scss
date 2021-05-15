@@ -16,25 +16,6 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap");
 
-.notification {
-  margin-top: 49px;
-  padding: 10px;
-
-  p {
-    margin: 0;
-    color: white;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    font-size: 1.5rem;
-  }
-}
-
-.notice {
-  background-color: #00d1b2;
-}
-
-.alert {
-  background-color: rgb(211, 90, 90);
-}
 
 body {
   margin: 0;
@@ -88,11 +69,31 @@ nav {
         color: #f2f2f2;
         text-decoration: none;
         padding: 14px;
-        
+
         &:hover {
           background-color: #111;
         }
       }
     }
   }
+}
+
+.notification {
+  margin-top: 49px;
+  padding: 10px;
+
+  p {
+    margin: 0;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 1.5rem;
+  }
+}
+
+.notice {
+  background-color: #00d1b2;
+}
+
+.alert {
+  background-color: rgb(211, 90, 90);
 }

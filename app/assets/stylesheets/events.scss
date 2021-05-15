@@ -10,8 +10,8 @@
     width: 50%;
     margin: 0 auto 50px auto;
     border-radius: 5px;
-    -webkit-box-shadow: 0px 0px 15px 5px #adadad;
-    box-shadow: 0px 0px 15px 5px #adadad;
+    -webkit-box-shadow: 0 0 15px 5px #adadad;
+    box-shadow: 0 0 15px 5px #adadad;
 
     h1 {
       padding: 50px 0 30px 0;
@@ -60,8 +60,8 @@
     width: 30%;
     margin: 0 auto 40px auto;
     border-radius: 5px;
-    -webkit-box-shadow: 0px 0px 15px 5px #adadad;
-    box-shadow: 0px 0px 15px 5px #adadad;
+    -webkit-box-shadow: 0 0 15px 5px #adadad;
+    box-shadow: 0 0 15px 5px #adadad;
 
     button {
       margin: 40px;
@@ -83,7 +83,6 @@
       padding-bottom: 40px;
 
       p {
-
         a {
           text-decoration: none;
 
@@ -184,7 +183,7 @@
         }
 
         .actions {
-          
+
           input {
             width: 60%;
             height: 30px;
