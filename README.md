@@ -26,11 +26,15 @@ To get a local copy up and running follow these simple example steps.
 
 ### Setup
 
-- Clone the project with `git clone https://github.com/sjcco/private-events`
+- Clone the project with `git clone https://github.com/sjcco/private-events`.
+- Run `bundle install` to obtain all dependecies required by the app.
+- Run `rails webpacker:install` to install the configured webpack file.
+- Run `rails db:migrate` to create the tables whithin the db.
+- Run this command to populate the db with some data `rails db:seed`.
+
 
 ### Usage
 
-- First run this command to populate the db with some data `bin/rails db:seed`
 - Start the server in a new terminal by navigating to the project folder and using `bin/rails server`
 - Visit [this page](http://localhost:3000/) to see the landing page with the upcoming and past events.
 - To navigate to a certain event you first need to sign in or sign up.

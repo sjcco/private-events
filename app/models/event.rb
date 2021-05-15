@@ -16,6 +16,6 @@ class Event < ApplicationRecord
   def end_date_is_after_start_date
     return if ending_date_time.blank? || starting_date_time.blank?
 
-    errors.add(:end_date, 'cannot be before the start date') if ending_date_time < starting_date_time
+    errors.add(:ending_date_time, 'cannot be before the start date') if ending_date_time < starting_date_time
   end
 end

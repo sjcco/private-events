@@ -12,15 +12,14 @@
     </div>
 
   </div>
+  <% unless Event.all.past.include?(@event) %>
   <% if @event.attendees.include?(current_user) %>
-
   <%= link_to cancel_register_path(id: @event.id) do %> <button type='button' class='cancel'>Cancel Attendance</button> <% end %>
-
   <% else %>
-
   <%= link_to register_path(id: @event.id) do %> <button type='button' class='attend'>Attend this event</button> <% end %>
-
   <% end %>
+  <% end %>
+
 </div>
 <div class="container-attendance">
 
