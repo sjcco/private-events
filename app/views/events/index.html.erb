@@ -1,7 +1,7 @@
 <div class="container-index">
   <h1>Upcoming Events</h1>
   <section class="display-events">
-    <% @events.upcoming.each do |event| %>
+    <% @upcoming_events.each do |event| %>
     <div>
       <h3> <%= link_to event, id:event.title do  %> <%= event.title %> <% end %></h3>
       <p><%= event.description %></p>
@@ -11,7 +11,7 @@
   </section>
   <h1>Past Events</h1>
   <section class="display-events">
-    <% @events.past.each do |event| %>
+    <% @past_events.each do |event| %>
     <div>
       <h3> <%= link_to event do %> <%= event.title %> <% end %></h3>
       <p><%= event.description %></p>
