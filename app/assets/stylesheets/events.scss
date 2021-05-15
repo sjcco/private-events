@@ -5,18 +5,20 @@
 .events {
   margin-top: 100px;
   text-align: center;
+
   .container-show {
     width: 50%;
     margin: 0 auto 50px auto;
     border-radius: 5px;
     -webkit-box-shadow: 0px 0px 15px 5px #adadad;
     box-shadow: 0px 0px 15px 5px #adadad;
+
     h1 {
       padding: 50px 0 30px 0;
       font-size: 30px;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     }
+
     .event {
       display: inline-flex;
       width: 100%;
@@ -26,14 +28,17 @@
       font-family: "Inter", sans-serif;
       font-size: 0.95rem;
       color: rgb(66, 66, 66);
+
       .description {
         width: 50%;
       }
+
       .info {
         width: 30%;
         padding-left: 20px;
       }
     }
+
     button {
       margin-bottom: 40px;
       padding: 10px;
@@ -41,19 +46,23 @@
       border: none;
       color: white;
     }
+
     .attend {
       background-color: #00adef;
     }
+
     .cancel {
       background-color: rgb(236, 68, 90);
     }
   }
+
   .container-attendance {
     width: 30%;
     margin: 0 auto 40px auto;
     border-radius: 5px;
     -webkit-box-shadow: 0px 0px 15px 5px #adadad;
     box-shadow: 0px 0px 15px 5px #adadad;
+
     button {
       margin: 40px;
       background-color: #00adef;
@@ -62,17 +71,22 @@
       border: none;
       border-radius: 5px;
       padding: 10px;
+
       &:hover {
         background-color: #0092cc;
       }
     }
+
     .content {
       display: none;
       overflow: hidden;
       padding-bottom: 40px;
+
       p {
+
         a {
           text-decoration: none;
+
           &:hover {
             text-decoration: underline;
           }
@@ -84,11 +98,13 @@
   .container-index {
     width: 80%;
     margin: auto;
+
     .display-events {
       display: flex;
       overflow-x: scroll;
       width: 100%;
       height: 35vh;
+
       div {
         min-width: 30vw;
         width: 35vw;
@@ -96,9 +112,11 @@
         -webkit-box-shadow: 0px 0px 15px 5px #adadad;
         box-shadow: 0px 0px 15px 5px #adadad;
         margin: 20px;
+
         h3 {
           padding-bottom: 15px;
         }
+
         p {
           width: 85%;
           margin: 0 auto 3rem auto;
@@ -106,6 +124,7 @@
           overflow: hidden;
           text-overflow: ellipsis;
         }
+
         small {
           padding-bottom: 20px;
           margin-bottom: 20px;
@@ -113,24 +132,31 @@
       }
     }
   }
+
   .container-new {
     width: 30%;
     margin: 1rem auto;
+
     .card {
       border-radius: 5px;
       -webkit-box-shadow: 0px 0px 15px 5px #adadad;
       box-shadow: 0px 0px 15px 5px #adadad;
+
       &:first-child {
         padding-top: 2.5rem;
       }
+
       &:last-child {
         padding-bottom: 2.5rem;
       }
+
       form {
         display: flex;
         flex-direction: column;
+
         .description {
           width: 70% !important;
+
           input {
             height: 50px;
           }
@@ -140,20 +166,25 @@
           margin: auto;
           display: flex;
           justify-content: space-evenly;
+
           .field-date {
             width: 40%;
+
             input {
               width: 100%;
             }
           }
         }
+
         .field {
           margin: 1.5rem auto;
           display: inline-flex;
           flex-direction: column;
           width: 50%;
         }
+
         .actions {
+          
           input {
             width: 60%;
             height: 30px;
