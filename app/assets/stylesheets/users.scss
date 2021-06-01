@@ -1,0 +1,93 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.container-30 {
+  width: 30%;
+  margin: 100px auto;
+}
+
+.container-80 {
+  width: 80%;
+  margin: 120px auto;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 15px 5px #adadad;
+  box-shadow: 0 0 15px 5px #adadad;
+
+  .events-container {
+    display: inline-flex;
+    justify-content: center;
+    width: 80%;
+    margin-bottom: 110px;
+
+    div {
+      width: 30%;
+    }
+  }
+}
+
+.users {
+  margin-top: 50px;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+  img {
+    margin: auto;
+    width: 60%;
+    height: 20%;
+  }
+
+  h1 {
+    font-size: 40px;
+    padding: 30px;
+  }
+
+  .card {
+    width: 70%;
+    margin: auto;
+    border: 1px #eaecef solid;
+    border-radius: 5px;
+    background-color: #f6f8fa;
+
+    .field {
+      margin: 50px 0 20px 0;
+
+      label {
+        margin: 10px 0;
+      }
+
+      input {
+        border: 1px #eaecef solid;
+        border-radius: 5px;
+        margin-top: 10px;
+        width: 80%;
+        height: 30px;
+      }
+    }
+
+    .actions {
+      input {
+        width: 80%;
+        height: 30px;
+        margin-bottom: 50px;
+        border: none;
+        background-color: #2c974b;
+        border-radius: 5px;
+        color: white;
+      }
+    }
+  }
+
+  p {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+    a {
+      text-decoration: none;
+      color: #3b66d6;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

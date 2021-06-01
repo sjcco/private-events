@@ -1,16 +1,67 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>PrivateEvents</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+<head>
+  <title>Private Events</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-  <body>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag "https://pro.fontawesome.com/releases/v5.10.0/css/all.css" %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <script defer src="/your-path-to-fontawesome/js/fontawesome.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <nav>
+      <%= link_to root_path do %> <div>
+        <%= image_tag "logo.png" %> <p>Bati-Events</p>
+      </div> <% end %>
+      <ul>
+        <% if user_signed_in? %>
+
+        <li>
+          <%= link_to "New event", new_event_path %>
+        </li>
+
+        <li>
+          <%= link_to current_user.name, user_path(current_user) %>
+        </li>
+        <li>
+          <%= link_to 'Log out', logout_path %>
+        </li>
+
+        <% else %>
+
+        <li>
+          <%= link_to 'Log in', login_path %>
+        </li>
+        <li>
+          <%= link_to 'Sign up', signup_path %>
+        </li>
+
+        <% end %>
+
+      </ul>
+    </nav>
+  </div>
+  <% if flash[:notice] %>
+  <div class="notification notice">
+    <p><%= notice %></p>
+  </div>
+  <% end %>
+  <% if flash[:alert] %>
+  <div class="notification alert">
+    <p><%= alert %></p>
+  </div>
+  <% end %>
+
+  <main class="<%= controller.controller_name%>">
     <%= yield %>
-  </body>
+  </main>
+
+</body>
+
 </html>
