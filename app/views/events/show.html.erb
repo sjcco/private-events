@@ -1,0 +1,35 @@
+<div class="container-show">
+  <h1><%= @event.title %></h1>
+  <div class="event">
+    <div class="description">
+      <p><%= @event.description %></p>
+    </div>
+    <div class="info">
+      <p><i class="fas fa-user-astronaut"></i> <%= @event.creator.name %></p>
+      <p><i class="far fa-calendar-alt"></i> <%= @event.starting_date_time.strftime("%B %-d, %Y at %l:%M %p") %></p>
+      <p><i class="far fa-calendar-alt"></i> <%= @event.ending_date_time.strftime("%B %-d, %Y at %l:%M %p") %></p>
+      <p><i class="fas fa-map-marked-alt"></i> <%= @event.location %></p>
+    </div>
+
+  </div>
+  <% unless Event.all.past.include?(@event) %>
+  <% if @event.attendees.include?(current_user) %>
+  <%= link_to cancel_register_path(id: @event.id) do %> <button type='button' class='cancel'>Cancel Attendance</button> <% end %>
+  <% else %>
+  <%= link_to register_path(id: @event.id) do %> <button type='button' class='attend'>Attend this event</button> <% end %>
+  <% end %>
+  <% end %>
+
+</div>
+<div class="container-attendance">
+
+
+  <button type='button' class='collapsible'>View attendance</button>
+
+  <div class="content">
+    <% @event.attendees.each do | attendee | %>
+    <p> <%= attendee.name %> </p>
+    <% end %>
+  </div>
+  <%= javascript_pack_tag "slide" %>
+</div>
