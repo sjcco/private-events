@@ -1,0 +1,38 @@
+<div class="container-new">
+
+  <div class="card">
+
+    <%= form_with model: @event do |f| %>
+    <div class="field">
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+    </div>
+    <div class="dates">
+      <div class="field-date">
+        <%= f.label :starting_datetime %>
+        <%= f.datetime_field :starting_date_time %>
+      </div>
+
+      <div class="field-date">
+        <%= f.label :ending_datetime %>
+        <%= f.datetime_field :ending_date_time %>
+      </div>
+    </div>
+
+    <div class="field">
+      <%= f.label :location %>
+      <%= f.text_field :location %>
+    </div>
+
+    <div class="description field">
+      <%= f.label :description %>
+      <%= f.text_field :description %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit 'Create event' %>
+    </div>
+    <% end %>
+
+  </div>
+</div>

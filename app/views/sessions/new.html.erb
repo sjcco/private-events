@@ -1,0 +1,24 @@
+<div class="container-30">
+
+  <%= image_tag "logo.png" %>
+
+  <h1>Sign in to Bati-events</h1>
+
+  <div class="card">
+
+    <%= form_with url: sessions_path do |f| %>
+    <div class="field">
+      <%= f.label :name %>
+      <br>
+      <%= f.text_field :name %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+    <% end %>
+
+  </div>
+
+  <p>Don't have an account sign up <%= link_to "here", signup_path %></p>
+
+</div>
